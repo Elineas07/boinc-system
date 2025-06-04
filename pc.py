@@ -26,3 +26,4 @@ def send_data():
 
 if __name__ == "__main__":
     send_data()
+print(send_data())
