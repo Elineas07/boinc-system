@@ -1,2 +1,13 @@
 # boinc-system
 kode til å lege til på pc og server for å gi serveren oppdateringer om system og feilmeldinger på boinc
+Det første du må gjøre er å laste ned boinc på klient-pcen din:
+Søk på boinc og gå inn på det første som kommer opp(boinc.berkeley.edu). Trykk på join science united. Følg instuksene man får på siden. Når den spør hva slag prosjekt typer man vil ha har jeg valgt biology and medicine, men du kan velge noe annet. Når man kommer til slutten trykk på downlod boinc. 
+Gå gjennom det som kommer opp når du laster den ned og trykk godta på alt også install. Når den er ferdig å installere burde det komme opp to sider: en som spør hva slags prosjekt man vil ha og en som viser at man ikke har noen pågående prosjekt(denne kommer sendere til å vise hvilket prosjekt man har og om man har noen oppgaver man driver med på pcen og hvor langt man har kommet på disse oppgavene). Vis man ikke får opp siden man kan velge prosjekt på så kan man trykke på add projekt. Velg prosjektet et prosjekt du liker(helst innenfor det du valgte istad, så siden jeg valgte biology and medecine så har jeg valgt noe som heter rosetta@home som har det som tema) og gå vidre. Trykk på at man er en ny bruker og skriv inn eposten du brukte når du lagde bruker på boinc(dette vil lage en bruker hos rosetta@home eller det prosjekte du valgte),  gå vidre til du har lagt til prosjektet(godta alt). 
+Når det er lagt til vil man bli pusjet til rosetta sine netsider og spurt om å bli med i et team. Vis du har valgt det samme som meg kan du godt bli med på mitt: Elvebakken vgs.
+Etter det kan du laste ned send_boinc_status.py og kjøre den (husk at du må bytte ut den ip-adressen jeg har i koden med ip-adressen til serveren din). 
+Vis du ikke har det fra før må du laste ned requests. Skriv pip install requests in i cmd.
+du kommer til å få mye informasjon som forteller deg om hostname, tid, status osv. og nederst vil det stå at conection til serveren er timed out, dette er et problem jeg ikke har fikset enda.
+Vis du får FileNotFoundError så må du sjekke om du har filen boinccmd.exe. Gå inn på cmd og skriv inn: "C:\Program Files\BOINC\boinccmd.exe" --get_simple_gui_info
+vis du får error der så kan det hende at du manuelt må gå inn på hver av mappene med cd før du skriver boinccmd.exe --get_tasks eller boinccmd.exe --get_simple_gui_info
+vis dette fortsatt ikke fungerer kan det hende du ikke har fått mapen, må du laste inn boinc på nytt
+når du har gjort dette kand du lasten ned boinc_serveren.py på serveren vis ikke du har gjort det enda. Etter det kan du åpne cmd og skrive inn python boinc_server.py (husk at du må være i mapen det python filen liger. Trykk deg inn på adressen du får når du kjører dette. du bør få en side der det står: ingen data mottat ennå.
