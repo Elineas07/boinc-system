@@ -2,6 +2,7 @@ import requests
 import socket
 import time
 import json
+import subprocess
 from datetime import datetime
 
 # Sett IP til Windows-serveren
@@ -9,12 +10,15 @@ SERVER_URL = "http://169.254.166.51:5000/boinc-update"
 
 # Simulert henting – her kan du bruke ekte BOINC GUI RPC-kall
 def get_boinc_data():
+    cmd = r"C:\Program Files\BOINC\boinc_cmd.exe"
+    result = subprocess.run([cmd, "--get_simple_gui_info"], capture_output=True, text=True)
     return {
         "hostname": socket.gethostname(),
         "timestamp": datetime.now().isoformat(),
-        "status": "Running Einstein@Home, 52% complete",
+        "status": result.stdout,
         "error": "",  # Sett inn feilmeldinger her hvis noen
     }
+
 
 def send_data():
     data = get_boinc_data()
@@ -26,4 +30,3 @@ def send_data():
 
 if __name__ == "__main__":
     send_data()
-print(send_data())
