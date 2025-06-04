@@ -10,4 +10,5 @@ du kommer til å få mye informasjon som forteller deg om hostname, tid, status 
 Vis du får FileNotFoundError så må du sjekke om du har filen boinccmd.exe. Gå inn på cmd og skriv inn: "C:\Program Files\BOINC\boinccmd.exe" --get_simple_gui_info
 vis du får error der så kan det hende at du manuelt må gå inn på hver av mappene med cd før du skriver boinccmd.exe --get_tasks eller boinccmd.exe --get_simple_gui_info
 vis dette fortsatt ikke fungerer kan det hende du ikke har fått mapen, må du laste inn boinc på nytt
-når du har gjort dette kand du lasten ned boinc_serveren.py på serveren vis ikke du har gjort det enda. Etter det kan du åpne cmd og skrive inn python boinc_server.py (husk at du må være i mapen det python filen liger. Trykk deg inn på adressen du får når du kjører dette. du bør få en side der det står: ingen data mottat ennå.
+når du har gjort dette kand du lasten ned boinc_serveren.py på serveren vis ikke du har gjort det enda. Husk at du trenger flask, skriv inn pip install flask i cmd for å få den
+Etter det kan du åpne cmd og skrive inn python boinc_server.py (husk at du må være i mapen det python filen liger. Trykk deg inn på adressen du får når du kjører dette. du bør få en side der det står: ingen data mottat ennå.
