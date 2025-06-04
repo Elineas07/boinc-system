@@ -6,7 +6,7 @@ import subprocess
 from datetime import datetime
 
 # Sett IP til Windows-serveren
-SERVER_URL = "http://169.254.166.51:5000/boinc-update"
+SERVER_URL = "http://172.31.1.34:5000/boinc-update"
 
 # Simulert henting – her kan du bruke ekte BOINC GUI RPC-kall
 def get_boinc_data():
