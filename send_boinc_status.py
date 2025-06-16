@@ -10,8 +10,8 @@ SERVER_URL = "http://172.31.1.34:5000/boinc-update"
 
 # Simulert henting – her kan du bruke ekte BOINC GUI RPC-kall
 def get_boinc_data():
-    cmd = r"C:\Program Files\BOINC\boinccmd.exe"
-    result = subprocess.run([cmd, "--get_simple_gui_info"], capture_output=True, text=True)
+    cmd = r"C:\Program Files\BOINC\boinccmd.exe" 
+    result = subprocess.run([cmd, "--get_simple_gui_info"], capture_output=True, text=True) #henter statusen til boinc fra boinccmd.exe
     return {
         "hostname": socket.gethostname(),
         "timestamp": datetime.now().isoformat(),
